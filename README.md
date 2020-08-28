@@ -7,6 +7,7 @@ tracert2csv <PATH_TO_TRACERT_EXPORT> <OUTPUT_CSV>
 ```
 
 ### Input
+```
 Tracing route to somenextdomain.com [34.102.136.180]
 over a maximum of 30 hops:
 
@@ -20,8 +21,10 @@ over a maximum of 30 hops:
   8    15 ms    12 ms    13 ms  180.136.102.34.bc.googleusercontent.com [34.102.136.180]
 
 Trace complete.
+```
 
 ### Output
+```
 1,3,15,2,hitronhub.home [192.168.0.1]
 2,265,49,17,99.227.240.1
 3,26,22,14,24.156.158.245
@@ -30,3 +33,4 @@ Trace complete.
 6,17,13,14,72.14.209.126
 7,*,*,*,Request timed out.
 8,15,12,13,180.136.102.34.bc.googleusercontent.com [34.102.136.180]
+```
