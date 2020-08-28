@@ -4,6 +4,10 @@ using System.Text;
 using System.Text.RegularExpressions;
 
 namespace tracert2csv {
+
+    /// <summary>
+    /// Traceroute model comprising of route components
+    /// </summary>
     struct Traceroute {
 
         public int Index { get; private set; }

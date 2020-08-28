@@ -11,25 +11,28 @@ namespace tracert2csv {
             string line;
             List<string> lines = new List<string>();
             List<Traceroute> traces = new List<Traceroute>();
-
-            StreamReader file = new StreamReader(@"tracerts\test.txt");
             Regex regex = new Regex("^  1.*");
 
-            while ((line = file.ReadLine()) != null) {
 
-                if (line.Length == 0 && started) {
-                    break;
-                }
-                else if (!started) {
-                    if(regex.IsMatch(line)) {
-                        started = true;
+            using (StreamReader file = new StreamReader(args[0])) {
+
+                while ((line = file.ReadLine()) != null) {
+
+                    if (line.Length == 0 && started) {
+                        break;
+                    }
+                    else if (!started) {
+                        if (regex.IsMatch(line)) {
+                            started = true;
+                            lines.Add(line);
+                        }
+                    }
+                    else {
                         lines.Add(line);
                     }
                 }
-                else {
-                    lines.Add(line);
-                }
             }
+
 
             foreach(string l in lines) {
                 Traceroute tr = new Traceroute(l);

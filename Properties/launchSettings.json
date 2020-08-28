@@ -1,8 +1,7 @@
 {
   "profiles": {
     "tracert2csv": {
-      "commandName": "Project",
-      "commandLineArgs": "E:\\Users\\Alvin\\source\\repos\\tracert2csv\\bin\\Debug\\netcoreapp3.1\\tracerts\\test.txt E:\\Users\\Alvin\\source\\repos\\tracert2csv\\bin\\Debug\\netcoreapp3.1\\tracerts\\test.csv"
+      "commandName": "Project"
     }
   }
 }
